@@ -22,3 +22,5 @@ fs.readFile("words_alpha.txt", function(err, buf) {
 ```
 
 The processed version can be found in [wordbank.txt](./wordbank.txt).
+
+## [DevPost](https://devpost.com/software/word-wizard-mxp5uf)

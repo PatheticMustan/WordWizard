@@ -14,6 +14,8 @@ function startGame() {
     gameState.rightHealth = 100;
     gameState.currentWord = "";
     winner = "";
+    console.log("Made with love by PatheticMustan.");
+    console.log("https://github.com/PatheticMustan/WordWizard");
 }
 
 function updateHealth() {
@@ -35,7 +37,6 @@ function updateHealth() {
 function handleKeypress(key) {
     if (gameState.isGameOver) return alert(`The ${gameState.winner} wizard reigns supreme!!!`);
 
-    console.log(key);
     document.getElementById("wordbox").innerHTML += `<div class="letter ${gameState.turn}Letter">${key}</div>`;
 
     // log
