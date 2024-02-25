@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Word Wizards</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Word Wizards</h1>
+        <p>Try tricking your opponent into spelling a valid word! The more letters, the higher the damage!</p>
+
+        <div class="gameGrid">
+            <div class="box healthContainer">
+                <h2>Health</h2>
+
+                <label for="WizardLeftHP" style="color: lightblue">Blue Wizard HP: </label>
+                <progress id="WizardLeftHP" value="100" max="100"></progress>
+
+                <br/><br/>
+
+                <label for="WizardRightHP" style="color: lightcoral">Red Wizard HP: </label>
+                <progress id="WizardRightHP" value="100" max="100"></progress>
+                <br/>
+            </div>
+
+            <div class="box actionContainer">
+                <h2>Actions</h2>
+
+                <button name="cast" onclick="cast()">Cast Word!</button>
+                <br> <label for="cast">When the opponent spells a valid word, cast a spell to damage them!</label>
+                <br/> <br/>
+
+                <button name="doubt" onclick="doubt()">Cast Doubt!</button>
+                <br> <label for="cast">When you don't think the opponent can make a valid word, cast some doubt to damage them!</label>
+                <br/> <br/>
+
+                <button name="help" onclick="help()">How To Play</button>
+                <br> <label for="help">Read the instructions on how to play.</label>
+                <br/><br/>
+
+                <a href="./wordbank.txt">Wordlist</a>
+            </div>
+
+            <div class="box playableAreaContainer">
+                <h2>The Arena</h2>
+
+                <div id="wordbox" class="highlightedBox box">
+                    <!-- <div class="letter">A</div> -->
+                </div>
+
+                <br/><br/>
+
+                <h2>Runes</h2>
+                <div id="keyboard" class="keyboard box">
+                    <div class="key" onclick="handleKeypress('A')">A</div>
+                    <div class="key" onclick="handleKeypress('B')">B</div>
+                    <div class="key" onclick="handleKeypress('C')">C</div>
+                    <div class="key" onclick="handleKeypress('D')">D</div>
+                    <div class="key" onclick="handleKeypress('E')">E</div>
+                    <div class="key" onclick="handleKeypress('F')">F</div>
+                    <div class="key" onclick="handleKeypress('G')">G</div>
+                    <div class="key" onclick="handleKeypress('H')">H</div>
+                    <div class="key" onclick="handleKeypress('I')">I</div>
+                    <div class="key" onclick="handleKeypress('J')">J</div>
+                    <div class="key" onclick="handleKeypress('K')">K</div>
+                    <div class="key" onclick="handleKeypress('L')">L</div>
+                    <div class="key" onclick="handleKeypress('M')">M</div>
+                    <div class="key" onclick="handleKeypress('N')">N</div>
+                    <div class="key" onclick="handleKeypress('O')">O</div>
+                    <div class="key" onclick="handleKeypress('P')">P</div>
+                    <div class="key" onclick="handleKeypress('Q')">Q</div>
+                    <div class="key" onclick="handleKeypress('R')">R</div>
+                    <div class="key" onclick="handleKeypress('S')">S</div>
+                    <div class="key" onclick="handleKeypress('T')">T</div>
+                    <div class="key" onclick="handleKeypress('U')">U</div>
+                    <div class="key" onclick="handleKeypress('V')">V</div>
+                    <div class="key" onclick="handleKeypress('W')">W</div>
+                    <div class="key" onclick="handleKeypress('X')">X</div>
+                    <div class="key" onclick="handleKeypress('Y')">Y</div>
+                    <div class="key" onclick="handleKeypress('Z')">Z</div>
+                </div>
+
+
+            </div>
+
+            <div class="box logContainer">
+                <h2>Logs</h2>
+                
+                <div id="logs">
+                    <div class="highlightedBox box">Wizard battle... START!</div>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+
+        <script src="./wordlist.js"></script>
+        <script src="./game.js"></script>
+    </body>
+</html>

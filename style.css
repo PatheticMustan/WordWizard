@@ -1,0 +1,132 @@
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background-color: #33201E;
+}
+
+body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+input {
+    background-color: #E8E894;
+}
+
+.gameGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+h2 {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.box {
+    border: 2px solid rgb(196, 188, 134);
+    background-color: #33201E;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.healthContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.actionContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.playableAreaContainer {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.logContainer {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.letter {
+    border: 2px solid rgb(196, 188, 134);
+    color: black;
+    border-radius: 10px;
+    margin: 0.2rem;
+    padding: 1rem;
+    width: 0.5rem;
+    height: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.highlightedBox {
+    display: flex;
+    background-color: #5f4a3a;
+    border: 2px solid black;
+}
+
+.keyboard {
+    display: flex;
+    background-color: #414141;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 4.5rem);
+}
+
+.key {
+    border: 2px solid rgb(39, 39, 39);
+    background-color: rgb(99, 99, 99);
+    border-radius: 10px;
+    margin: 0.3rem;
+    padding: 1rem;
+    width: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: rgb(132, 132, 132);
+}
+
+#wordbox {
+    min-height: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.blueLetter {
+    background-color: lightblue;
+}
+
+.redLetter {
+    background-color: lightcoral;
+}
+
+#logs {
+    height: 35rem;
+    overflow-y: auto;
+}
