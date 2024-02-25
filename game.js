@@ -102,8 +102,8 @@ function cast() {
 function doubt() {
     if (gameState.isGameOver) return alert(`The ${gameState.winner} wizard reigns supreme!!!`);
     
-    if (gameState.currentWord.length <= 3) {
-        alert("Words must be longer than 3 letters!");
+    if (gameState.currentWord.length <= 1) {
+        alert("You can't cast doubt on such a short word...");
         return;
     }
 
@@ -115,19 +115,19 @@ function doubt() {
         // deal 20 points of damage to the other wizard
         if (gameState.turn === "blue") {
             // damage red
-            gameState.rightHealth -= 10;
+            gameState.rightHealth -= 30;
         } else {
-            gameState.leftHealth -= 10;
+            gameState.leftHealth -= 30;
         }
-        log(`${gameState.currentWord} could not have made any possible words! 10 points of damage to ${gameState.turn==="blue"? "red" : "blue"}`);
+        log(`${gameState.currentWord} could not have made any possible words! 30 points of damage to ${gameState.turn==="blue"? "red" : "blue"}`);
     } else {
         // if the word is invalid though, deal 10 points to the wizard who clicked cast
         if (gameState.turn === "blue") {
-            gameState.leftHealth -= 5;
+            gameState.leftHealth -= 30;
         } else {
-            gameState.rightHealth -= 5;
+            gameState.rightHealth -= 30;
         }
-        log(`${gameState.currentWord} could have made ${possibleWords.length} different words... 5 points of damage to ${gameState.turn}.`)
+        log(`${gameState.currentWord} could have made ${possibleWords.length} different words... 30 points of damage to ${gameState.turn}.`)
     }
 
     switchTurns();
