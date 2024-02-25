@@ -29,7 +29,7 @@ function updateHealth() {
         gameState.isGameOver = true;
     }
 
-    alert(`The ${gameState.winner} wizard reigns supreme!!!`);
+    if (gameState.isGameOver) alert(`The ${gameState.winner} wizard reigns supreme!!!`);
 }
 
 function handleKeypress(key) {
