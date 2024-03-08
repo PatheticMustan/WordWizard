@@ -2,6 +2,8 @@
 
 Trick your opponent into spelling words to deal psychic verbal damage on them!
 
+![Screenshot of the game UI](./image.png)
+
 For the word bank, I used [dwyl/english-words](https://github.com/dwyl/english-words/).
 The shorter words were removed with the following code:
 
